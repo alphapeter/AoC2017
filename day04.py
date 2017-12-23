@@ -1,11 +1,7 @@
-import math
-
-
 def calc_a(input):
     count = 0
     for row in input.split('\n'):
         count += 1 if verify_row(row) else 0
-
     return count
 
 
@@ -18,10 +14,14 @@ def verify_row(row):
                 return False
     return True
 
+# B
 
+def calc_b(input):
+    count = 0
+    for row in input.split('\n'):
+        count += 1 if verify_row_b(row) else 0
 
-
-
+    return count
 
 def verify_row_b(row):
     tokens = row.split()
@@ -31,10 +31,3 @@ def verify_row_b(row):
             if ''.join(sorted(t1)) == ''.join(sorted(t2)):
                 return False
     return True
-
-def calc_b(input):
-    count = 0
-    for row in input.split('\n'):
-        count += 1 if verify_row_b(row) else 0
-
-    return count

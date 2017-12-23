@@ -1,6 +1,3 @@
-import math
-
-
 def calc_a(input):
     jumps = 0
     pc = 0

@@ -6,6 +6,7 @@ test_input = """0
 1
 -3"""
 
+
 class TestDay05a(unittest.TestCase):
 
     def test_case1(self):

@@ -12,6 +12,15 @@ def calc_a(input):
     return abs((input - math.pow(inner_width, 2)) % (side_length - 1) - math.floor(side_length / 2)) + math.floor(side_length / 2)
 
 
+def calc_b(input):
+    graph = Graph()
+
+    while graph.get_value() <= input:
+        graph.move()
+
+    return graph.get_value()
+
+
 class Graph:
     def __init__(self):
         self.direction = 0
@@ -76,12 +85,3 @@ class Graph:
         move = self.forward_moves.get(self.direction)
         self.x += move[0]
         self.y += move[1]
-
-
-def calc_b(input):
-    graph = Graph()
-
-    while graph.get_value() <= input:
-        graph.move()
-
-    return graph.get_value()
